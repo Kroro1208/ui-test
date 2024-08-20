@@ -14,11 +14,11 @@ const mockAxios = jest.mocked(axios);
 
 // UserSearchコンポーネントのテストスイートを定義
 describe('UserSearch', () => {
-    // 各テストケースの前に実行される前処理
     beforeEach(() => {
         // 各テストの前にaxios.getのモックをリセット
         mockAxios.get.mockReset();
     });
+
     it('入力フォームに入力した内容でAPIリクエストが送信される', async () => {
         // テストで使用するユーザー情報を定義
         const userInfo = {
